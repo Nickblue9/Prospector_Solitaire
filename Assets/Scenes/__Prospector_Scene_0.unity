@@ -167,11 +167,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 827460508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27fd7be41cf7044f6b07142f99f76f73, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d3e40aee7e546b7b3f1de96a7f7fab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xmlr:
-    xmlText: 
+  deckXML: {fileID: 4900000, guid: c76312a0fb08948699e1abf935e4a957, type: 3}
+  deck: {fileID: 0}
 --- !u!20 &827460512
 Camera:
   m_ObjectHideFlags: 0
@@ -238,8 +238,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 827460508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d3e40aee7e546b7b3f1de96a7f7fab, type: 3}
+  m_Script: {fileID: 11500000, guid: 27fd7be41cf7044f6b07142f99f76f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deckXML: {fileID: 4900000, guid: c76312a0fb08948699e1abf935e4a957, type: 3}
-  deck: {fileID: 0}
+  suitClub: {fileID: 0}
+  suitDiamond: {fileID: 0}
+  suitHeart: {fileID: 0}
+  suitSpade: {fileID: 0}
+  faceSprites: []
+  rankSprites: []
+  cardBack: {fileID: 0}
+  cardBackGold: {fileID: 0}
+  cardFront: {fileID: 0}
+  cardFrontGold: {fileID: 0}
+  prefabCard: {fileID: 0}
+  prefabSprite: {fileID: 0}
+  xmlr:
+    xmlText: 
+  cardNames: []
+  cards: []
+  decorators: []
+  cardDefs: []
+  deckAnchor: {fileID: 0}
