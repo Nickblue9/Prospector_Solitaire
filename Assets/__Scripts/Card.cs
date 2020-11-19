@@ -15,6 +15,47 @@ public class Card : MonoBehaviour{
     public GameObject back;
     public CardDefinition def;
 
+    public SpriteRenderer[] spriteRenderers;
+
+    void Start(){
+        SetSortOrder(0);
+    }
+
+    public void PopulateSpriteRenderers(){
+        if(spriteRenderers == null || spriteRenderers.Length == 0){
+            spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        }
+    }
+
+    public void SetSortingLayerName(string tSLN){
+        PopulateSpriteRenderers();
+
+        foreach(SpriteRenderer tSR in spriteRenderers){
+            tSR.sortingLayerName = tSLN;
+        }
+    }
+
+    public void SetSortOrder(int s0rd){
+        PopulateSpriteRenderers();
+
+        foreach(SpriteRenderer tSR in spriteRenderers){
+            if(tSR.gameObject == this.gameObject){
+                tSR.sortingOrder  = s0rd;
+                continue;
+            }
+
+            switch(tSR.gameObject.name){
+                case "back":
+                    tSR.sortingOrder = s0rd+2;
+                    break;
+                case "face":
+                default:
+                    tSR.sortingOrder = s0rd+1;
+                    break;
+            }
+        }
+    }
+
     public bool faceUp{
         get{
             return (!back.activeSelf);
@@ -22,6 +63,10 @@ public class Card : MonoBehaviour{
         set{
             back.SetActive(!value);
         }
+    }
+
+    virtual public void OnMouseUpAsButton(){
+        print(name);
     }
 }
 
