@@ -41,21 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer
+  - name: Row0
     uniqueID: 1900851689
     locked: 0
-  - name: New Layer
+  - name: Row1
     uniqueID: 4211379131
     locked: 0
-  - name: New Layer
+  - name: Row2
     uniqueID: 2727256757
     locked: 0
-  - name: New Layer
+  - name: Row3
     uniqueID: 606312891
     locked: 0
-  - name: New Layer
+  - name: Discard
     uniqueID: 1945747357
     locked: 0
-  - name: New Layer
+  - name: Draw
     uniqueID: 1383969755
     locked: 0
